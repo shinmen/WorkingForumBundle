@@ -3,7 +3,7 @@ please note that array nodes (such as 'vote') **are required and must be defined
 
 yosimitso_working_forum_bundle:
 
-| Node       | Parameters                    | Required | Accepted                  | Default     | Explanations |
+| Subnode    | Parameters                    | Required | Accepted                  | Default     | Explanations |
 |------------|-------------------------------|----------|---------------------------|-------------|--------------|
 |            | site_title                    | **Yes**  | String not empty          |             | Site's title, used in email |
 |            | allow_anonymous_read          | **Yes**  | Boolean                   |             | Allow or not access to anonymous user (in both cases, anonymous can't post)|
