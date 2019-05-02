@@ -41,4 +41,4 @@ See SETUP-SF2-SF3.md or SETUP-SF4-FLEX if you use Symfony 4 with Flex structure
 
 Configuration
 -----------------
-See CONFIGURATION.md to configurate the bundle to your needs
+Refer to CONFIGURATION.md

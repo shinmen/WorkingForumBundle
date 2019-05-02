@@ -43,13 +43,13 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue(20)
                 ->end()
                 ->scalarNode('date_format')
-                    ->defaultValue('Y/m/d H:i:s')
+                    ->defaultValue('d/m/Y H:i:s')
                     ->cannotBeEmpty()
                     ->validate()
                         ->ifTrue(function ($date) {
                             return !(bool)strtotime($date);
                         })
-                        ->thenInvalid('WF Forum : the "date_format" parameters must be a valid date format')
+                        ->thenInvalid('WorkingForum Bundle : the "date_format" parameters must be a valid date format')
                     ->end()
                 ->end()
                 ->booleanNode('allow_moderator_delete_thread')
