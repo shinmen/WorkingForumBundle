@@ -49,7 +49,7 @@ class Configuration implements ConfigurationInterface
                         ->ifTrue(function ($date) {
                             return !(bool)strtotime($date);
                         })
-                        ->thenInvalid('WorkingForum Bundle : the "date_format" parameters must be a valid date format')
+                        ->thenInvalid('WorkingForum Bundle : the "date_format" parameters must be a valid date format, please see available constants on : https://www.php.net/manual/en/function.date.php')
                     ->end()
                 ->end()
                 ->booleanNode('allow_moderator_delete_thread')
@@ -65,12 +65,14 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue(365)
                 ->end()
                 ->arrayNode('vote')
+                    ->defaultValue(['threshold_useful_post' => 5])
                     ->children()
                         ->integerNode('threshold_useful_post')
                         ->isRequired()
                         ->min(1)
                         ->end()
                     ->end()
+            
                 ->end()
                 ->arrayNode('file_upload')
                     ->children()
